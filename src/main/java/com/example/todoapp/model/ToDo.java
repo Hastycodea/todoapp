@@ -21,5 +21,4 @@ public class ToDo {
     public String description;
     public Date dueDate;
     public String status;
-
 }

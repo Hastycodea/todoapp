@@ -1,14 +1,12 @@
 package com.example.todoapp.service;
-
 import com.example.todoapp.model.ToDo;
 import com.example.todoapp.repo.ToDoRepo;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public class ToDoService {
-    private final ToDoRepo repo;
+    private ToDoRepo repo;
 
     public ToDoService(ToDoRepo repo) {
         this.repo = repo;

@@ -17,6 +17,13 @@ public class ToDoController {
         this.service = service;
     }
 
+    //CRUD
+//    create => post
+//    read => get
+//    update => put
+//    delete => delete
+
+
     @GetMapping("/home")
     public String test() {
         return "Welcome Home";
@@ -45,7 +52,7 @@ public class ToDoController {
     }
 
     @PutMapping("/tasks/{id}")
-    public ResponseEntity<ToDo> updateTask(@PathVariable int id, @RequestBody ToDo toDo) {
+    public ResponseEntity<ToDo> updateTask(@PathVariable long id, @RequestBody ToDo toDo) {
         ToDo newTask = null;
         newTask = service.updateTask(toDo, id);
 
